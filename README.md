@@ -1,10 +1,16 @@
-## Brief Explanation
-I always find that Google Play Services is way too aggresive in doing its activities in the background. And its no secret that this main services from google is oftenly one of the main culprit for the sub par battery performance on most stock or even custom ROM across devices.
+GMS = Google Play Services  
+  
+## 简要说明
 
-## The Idea & The Barrier
-Starting in Android 6.0, Google has introduced one of my favorite features in battery saving : DOZE (quick read about this [Here](https://www.howtogeek.com/242563/how-androids-doze-improves-your-battery-life-and-how-to-tweak-it/)), it help us to make apps go into a "shallow" hibernation state. Where it use less energy but retain it's functionality.
+我发现GMS在后台时的活动过于激进。众所周知，过于活跃的GMS正是导致设备疯狂耗电的罪魁祸首。
 
-Thing is, this feature is NOT applicable for Google Play Services. Thus, it cant help you to save the battery from being eaten by Google Play Services. And this is not for no reason of course (read SIDE EFFECT/NOTE section bellow for further explanation)
+## 想法 以及 实际情况
+
+Google从Android 6.0开始，推出了 Doze ( [点击这里快速了解Doze](https://www.howtogeek.com/242563/how-androids-doze-improves-your-battery-life-and-how-to-tweak-it/))它有助于让应用进入潜度休眠状态，也就是我们常说的「打盹」。  
+  
+应用进入「打盹」状态后，能在保持功能正常使用的情况下降低耗电量。  
+  
+但问题是，GMS无法进去「打盹」。因此，它无法减少GMS的耗电量。当然Google这么设定也是有原因的（请阅读 SIDE EFFECT / NOTE 部分以进一步了解）
 
 ## THE SOLUTION
 Quick study (detail, if you are interested [Here](https://android.stackexchange.com/questions/143247/how-to-make-google-play-services-and-other-default-white-listed-system-apps-doze))reveal that Google put simple configuration is /system/etc/sysconfig/google.xml that WHITELISTING Google Play Services from the DOZE Mechanism.

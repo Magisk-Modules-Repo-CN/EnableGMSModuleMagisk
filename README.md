@@ -12,16 +12,19 @@ Google从Android 6.0开始，推出了 Doze ( [点击这里快速了解Doze](htt
   
 但问题是，GMS无法进去「打盹」。因此，它无法减少GMS的耗电量。当然Google这么设定也是有原因的（请阅读 SIDE EFFECT / NOTE 部分以进一步了解）
 
-## THE SOLUTION
-Quick study (detail, if you are interested [Here](https://android.stackexchange.com/questions/143247/how-to-make-google-play-services-and-other-default-white-listed-system-apps-doze))reveal that Google put simple configuration is /system/etc/sysconfig/google.xml that WHITELISTING Google Play Services from the DOZE Mechanism.
+## 解决方案
 
-So to make DOZE able to work on it, we simply need to remove the whitelisting.
+快速了解（如果您有兴趣请点[这里](https://android.stackexchange.com/questions/143247/how-to-make-google-play-services-and-other-default-white-listed-system-apps-doze))  
+  
+原理很简单，默认情况下你是无法在Doze列表看到GMS的。这个模块的作用就是将GMS从Doze的白名单显示出来。
 
-This is WHAT THIS MODULE DO - SYSTEMLESSLY (obviously)
+接着，我们只需要将GMS从Doze白名单中移除，这样GMS就能够进入「打盹」状态。
 
-By installing this module, you can move Google Play Services from the "App Not Optimised" list to "App Optimised" which mean DOZE mechanism will work its magic on Google Play Services, thus should saving you more juices/batt throughout the day.
+这就是这个模块所做的所有事情，并且是Systemlessly。
 
-OOS (OnePlus) user with Nougat version and above installed wont find this option anymore. Instead, they should go to "Google Play Services" App Info from setting, choose the battery option, and scroll down to "Battery Optimisation" to check the status
+通过本模块，您可以将GMS从“Doze白名单”列表移至“优化列表”中，使得GMS可以进入「打盹」状态以节省一部分耗电。
+
+安装了Android7或更高版本的系统的 一加手机用户 无法找到此选项。但还是可以从设置中的“GMS”应用信息中，选择电池选项以检查优化状态。
 
 ## The Side Effect/ Note
 Saving energy never come without side effect. Same goes with this method.

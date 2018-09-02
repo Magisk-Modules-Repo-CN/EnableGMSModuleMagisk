@@ -10,7 +10,7 @@ Google从Android 6.0开始，推出了 Doze ( [点击这里快速了解Doze](htt
   
 应用进入「打盹」状态后，能在保持功能正常使用的情况下降低耗电量。  
   
-但问题是，GMS无法进去「打盹」。因此，它无法减少GMS的耗电量。当然Google这么设定也是有原因的（请阅读 SIDE EFFECT / NOTE 部分以进一步了解）
+但问题是，GMS无法进去「打盹」。因此，它无法减少GMS的耗电量。当然Google这么设定也是有原因的（请阅读下方 注意事项 部分以进一步了解）
 
 ## 解决方案
 
@@ -26,36 +26,39 @@ Google从Android 6.0开始，推出了 Doze ( [点击这里快速了解Doze](htt
 
 安装了Android7或更高版本的系统的 一加手机用户 无法找到此选项。但还是可以从设置中的“GMS”应用信息中，选择电池选项以检查优化状态。
 
-## The Side Effect/ Note
-Saving energy never come without side effect. Same goes with this method.
-
-By enabling Doze on Google Play Services, it will theoritically delay/pause some it's services. Most noticeable might be the GCM (cloud messaging) services.
-
-App that use this services might experience delay in notification when Doze already kick in.
-
-Although, in my experience (i use this mod on all of my three devices) my notif for LINE, WhatsApp and Telegram (my main comm app) is never been delayed. ( I put all these apps in my whitelist btw)
-
-The one i noticed had slight delay is GMail. But i check my mail regularly throughout the day, so i need no real time notif for that.
-
-As for all other main services like Accounts, Alarm, Location and elses, i never have any issue with them when i got this module active. GPS work fine, Alarm ringing, Account Syncing normally.
-
-## CHANGELOG
+## 注意事项
+  
+省电不会导致出现问题，这种方法也是如此。  
+  
+通过在GMS开始「打盹」，正常情况下会导致GMS延迟或暂停某些服务。其中有一个我们能感知到的，就是GCM通知服务的延迟。  
+  
+当设备已经处于「打盹」状态时，使用相关服务的部分应用程序会有一定的通知延迟。  
+  
+但，根据我个人的情况来看(我在我的三个设备上都用了这个模块），我的LINE，WhatsApp和Telegram的通知一切正常。 （在我把这些应用放入白名单的前提下）  
+  
+我注意到的那个稍有延迟的是Gmail。但是我个人习惯自行开邮箱查阅邮件，所以这个对我来说影响不大。  
+  
+至于其他方面，例如 账户同步，铃声，位置服务以及其他的什么东西，都没有任何问题。  
+  
+GPS工作正常，通知响铃正常，帐户同步正常。  
+  
+## 更新日志
 ### v1. 
-    -Initial Release
+    - 初发布
 ### v2. 
-    -Template Update
+    - Magisk模板更新
 ### v3. 
-    -Code Cleaning
+    - 代码精简
 ### v4. 
-    -Template Update for Magisk 13.3
+    - Magisk模板更新至13.3
 ### v5. 
-    -Template Update for Magisk 14 - PLEASE UPDATE YOUR MAGISK INSTALLATION
+    - Magisk模板更新至13.3 - 请更新你的 Magisk Manager
 ### v6. 
-    -Template Update for Magisk 15 & Adding OREO Support
+    - Magisk模板更新至15 - 兼容Oreo
 
-## Support
-Find support on my thread @XDA : [Here](https://forum.xda-developers.com/apps/magisk/module-enable-doze-google-play-services-t3608783/post72344542#post72344542)
+## 支持
+你可以在 @XDA找到我的这个项目 : [点击这里跳转](https://forum.xda-developers.com/apps/magisk/module-enable-doze-google-play-services-t3608783/post72344542#post72344542)
 
-## Copyright
+## 版权所有
 otonieru@xda-developers - 2018
-If you wish to implement the modification into your ROM, please mention me :)
+如果您希望该模块适配您使用的ROM，请告知于我 : )
